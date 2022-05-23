@@ -20,7 +20,7 @@ body{
 }
 
 .app__left{
-    flex: 0.9;
+    flex: 0.8;
     padding-bottom: 20px;
 }
 
@@ -32,6 +32,10 @@ body{
 
 .card{
     margin: 0 2% !important;
+}
+
+.app__bars{
+    margin-top: 0.8rem;
 }
 
 .table{

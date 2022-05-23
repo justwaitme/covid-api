@@ -6,6 +6,7 @@ import {Card, CardContent} from '@material-ui/core';
 import LiveCases from './components/LiveCases';
 import LineChart from './components/LineChart';
 import {sortDatabyCases} from './components/utility';
+import Bars from './components/Bars';
 
 
 
@@ -79,7 +80,9 @@ function App() {
           {/* InfoBoxs* title:"Corona Virus Deaths" todayDeaths   total */}
           <Cards title="corona-virus Deaths" cases={countryInfo.todayDeaths} total={countryInfo.deaths} type="deaths"/>
         </div>
-        
+        <div className="app__bars">
+              <Bars data={countryInfo}/>
+        </div>
       </div>
       <div className='app__right'>
               <Card>
@@ -87,7 +90,6 @@ function App() {
                   <h3>Live Cases By Country</h3>
                   {/* Table */}
                   <LiveCases data={lifeCases}/>
-                  
                   <h3>Worldwide new cases</h3>
                   {/* Graph*/}
                   <LineChart casesType="cases"/>
